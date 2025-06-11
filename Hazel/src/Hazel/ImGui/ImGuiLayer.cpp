@@ -2,10 +2,10 @@
 #include "ImGuiLayer.h"
 #include "Hazel/Layer.h"
 #include "Hazel/Application.h"
-#include "GLFW/glfw3.h"
-#include "imgui.h"
-#include "Platform/OpenGL/imgui_impl_opengl3.h"
 #include "Hazel/Core.h"
+#include "imgui.h"
+#include "GLFW/glfw3.h"
+#include "Platform/OpenGL/imgui_impl_opengl3.h"
 #include "Platform/OpenGL/imgui_impl_glfw.h"
 
 #include "Hazel/Events/KeyEvent.h"
@@ -65,7 +65,7 @@ namespace Hazel
         ImGui::NewFrame();
         static bool show = true;
         
-        ImGui::ShowDemoWindow(&show);
+        //ImGui::ShowDemoWindow(&show);
 
         if(ImGui::Begin("Main"))
         {

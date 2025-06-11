@@ -6,7 +6,6 @@
 #include "Hazel/Layer.h"
 #include "Hazel/Log.h"
 #include "Hazel/ImGui/ImGuiLayer.h"
-#include "Hazel/OpenGLLayer/OpenGLLayer.h"
 
 //#include "GLFW/glfw3.h"
 //#include "glad/glad.h"
