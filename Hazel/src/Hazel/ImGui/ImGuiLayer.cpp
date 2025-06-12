@@ -34,7 +34,7 @@ namespace Hazel
         io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;
 
         io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-        io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+        //io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
         // io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
 
         GLFWwindow* window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetWindowObject());
@@ -51,7 +51,6 @@ namespace Hazel
 
     void ImGuiLayer::OnUpdate()
     {
-        
         ImGuiIO& io = ImGui::GetIO();
         Application& app = Application::Get();
         io.DisplaySize = ImVec2(app.GetWindow().GetWidth(), app.GetWindow().GetHeight());
@@ -72,7 +71,6 @@ namespace Hazel
             ImGui::Text("%.3f FPS, %.1fms",(1000/(io.DeltaTime*1000)), io.DeltaTime*1000);
         }
         ImGui::End();
-
 
 
         ImGui::Render();

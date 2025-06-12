@@ -6,27 +6,24 @@ public:
 	ExampleLayer()
 		: Layer("Example")
 	{
-		
 	}
 
 	void OnUpdate() override
 	{
 		count++;
-		if(count == 10)
+		if (count == 10)
 		{
 			HZ_INFO("ExampleLayer::Update x10");
 			count = 0;
 		}
-
 	}
 
 	void OnEvent(Hazel::Event& event) override
 	{
-		//HZ_TRACE("{0}", event);
+		HZ_TRACE("{0}", event);
 	}
 
 	int count = 0;
-
 };
 
 class Sandbox : public Hazel::Application
@@ -36,7 +33,6 @@ public:
 	{
 		PushLayer(new ExampleLayer());
 		PushOverlay(new Hazel::ImGuiLayer());
-		HZ_CORE_INFO("Sandbox Application Created");
 	}
 
 	~Sandbox()

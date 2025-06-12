@@ -68,7 +68,8 @@ project "Hazel"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox"),
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/RayTracing")
 		}
 
 	filter "configurations:Debug"

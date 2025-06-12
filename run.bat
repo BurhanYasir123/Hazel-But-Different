@@ -1,4 +1,5 @@
 @echo off
 call vendor\bin\premake\premake5.exe vs2022
-msbuild
-.\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe
+msbuild Hazel.sln /property:Configuration=Debug
+
+.\bin\Debug-windows-x86_64\RayTracing\RayTracing.exe

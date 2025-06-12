@@ -64,9 +64,6 @@
     <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3.h">
       <Filter>Platform\OpenGL</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h">
-      <Filter>Platform\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
