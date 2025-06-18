@@ -10,6 +10,7 @@ public:
 
 	void OnUpdate() override
 	{
+		
 		count++;
 		if (count == 10)
 		{
@@ -31,6 +32,7 @@ class Sandbox : public Hazel::Application
 public:
 	Sandbox()
 	{
+		PushLayer(new Hazel::OpenGLLayer());
 		PushLayer(new ExampleLayer());
 		PushOverlay(new Hazel::ImGuiLayer());
 	}

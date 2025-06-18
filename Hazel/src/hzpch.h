@@ -11,6 +11,10 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
+#include <fstream>
+
+#include <chrono>
+#include <ratio>
 
 #include "Hazel/Log.h"
 

@@ -57,6 +57,8 @@ namespace Hazel {
 			glClearColor(1, 0, 1, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
 			
+			HZ_OPTICK_INIT();
+			
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
 

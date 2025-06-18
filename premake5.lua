@@ -14,7 +14,13 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Hazel/vendor/GLFW/include"
 IncludeDir["Glad"] = "Hazel/vendor/Glad/include"
-IncludeDir["ImGui"] = "Hazel/vendor/imgui/"
+IncludeDir["Optick"] = "Hazel/vendor/Optick/include"
+IncludeDir["ImGui"] = "Hazel/vendor/imgui"
+IncludeDir["glm"] = "Hazel/vendor/glm"
+
+
+LibraryDir = {}
+LibraryDir["Optick"] = "Hazel/vendor/Optick/lib/x64/release"
 
 include "Hazel/vendor/GLFW"
 include "Hazel/vendor/Glad"
@@ -43,7 +49,14 @@ project "Hazel"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.Optick}",
+		"%{IncludeDir.glm}"
+	}
+
+	libdirs
+	{
+		"%{LibraryDir.Optick}"
 	}
 
 	links 
@@ -51,7 +64,8 @@ project "Hazel"
 		"GLFW",
 		"Glad",
 		"opengl32.lib",
-		"ImGui"
+		"ImGui",
+		"OptickCore.lib"
 	}
 
 	filter "system:windows"
@@ -69,7 +83,7 @@ project "Hazel"
 		postbuildcommands
 		{
 			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox"),
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/RayTracing")
+			("{COPY} %{cfg.solution.location}/Hazel/vendor/Optick/lib/x64/Release/OptickCore.dll ../bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
@@ -106,7 +120,8 @@ project "Sandbox"
 		"Hazel/vendor/spdlog/include",
 		"Hazel/vendor/GLFW/include",
 		"Hazel/vendor/glad/include",
-		"Hazel/src"
+		"Hazel/src",
+        "%{IncludeDir.Optick}"
 	}
 
 	links

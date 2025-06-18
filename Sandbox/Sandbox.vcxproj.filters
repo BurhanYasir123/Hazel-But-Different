@@ -1,27 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="..">
-      <UniqueIdentifier>{61705900-4DFC-870B-B6AA-880BA255880B}</UniqueIdentifier>
+    <Filter Include="Hazel">
+      <UniqueIdentifier>{99294D0D-053E-75BE-CEBF-181E3A9371EF}</UniqueIdentifier>
     </Filter>
-    <Filter Include="..\Hazel">
-      <UniqueIdentifier>{24146F37-10E1-C942-39FA-B7EA2526FFD0}</UniqueIdentifier>
+    <Filter Include="Hazel\vendor">
+      <UniqueIdentifier>{D6D9B06F-C23C-4014-6BC2-78CA57040C97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hazel\vendor\GLFW">
+      <UniqueIdentifier>{D52ACBE3-4141-C979-8AB8-549BF60D9A01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hazel\vendor\GLFW\include">
+      <UniqueIdentifier>{48576CCF-B419-A059-FDC9-2EE669CB7837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hazel\vendor\GLFW\include\GLFW">
+      <UniqueIdentifier>{87DF28EF-7305-F355-5C4B-782148101822}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hazel\vendor\GLFW\src">
+      <UniqueIdentifier>{6C4B7AD8-D8B7-35D3-A1AB-CD300DD7573B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hazel\vendor\glad">
+      <UniqueIdentifier>{9D42DDE3-0959-DB79-52D0-669BBE25AC01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hazel\vendor\glad\include">
+      <UniqueIdentifier>{10B7DDF0-7C79-117B-C529-A007312BEA58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hazel\vendor\glad\include\glad">
+      <UniqueIdentifier>{1774E70B-039A-B172-ECDF-363ED8A4D63E}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Hazel\vendor\GLFW\include\GLFW\glfw3.h">
+      <Filter>Hazel\vendor\GLFW\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\include\GLFW\glfw3native.h">
+      <Filter>Hazel\vendor\GLFW\include\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\cocoa_joystick.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\cocoa_platform.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\egl_context.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\glx_context.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\internal.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\linux_joystick.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\mappings.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\nsgl_context.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\null_joystick.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\null_platform.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\osmesa_context.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\posix_thread.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\posix_time.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\wgl_context.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\win32_joystick.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\win32_platform.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\wl_platform.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\x11_platform.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\GLFW\src\xkb_unicode.h">
+      <Filter>Hazel\vendor\GLFW\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Hazel\vendor\glad\include\glad\glad.h">
+      <Filter>Hazel\vendor\glad\include\glad</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="src\SandboxApp.cpp">
       <Filter>src</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Hazel\src">
-      <Filter>..\Hazel</Filter>
-    </None>
-    <None Include="..\src">
-      <Filter>..</Filter>
-    </None>
   </ItemGroup>
 </Project>
