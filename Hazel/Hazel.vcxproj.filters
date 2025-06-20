@@ -10,12 +10,6 @@
     <Filter Include="Hazel\ImGui">
       <UniqueIdentifier>{83AD5E9B-EF62-D790-7857-D167E40BCE94}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Hazel\OpenGLLayer">
-      <UniqueIdentifier>{0A68B083-767E-AE19-BFF5-393B2B4B7FA1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Hazel\Renderer">
-      <UniqueIdentifier>{5F4907E6-4B17-FBEB-34AB-6B122018D750}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
@@ -61,12 +55,6 @@
     <ClInclude Include="src\Hazel\Log.h">
       <Filter>Hazel</Filter>
     </ClInclude>
-    <ClInclude Include="src\Hazel\OpenGLLayer\OpenGLLayer.h">
-      <Filter>Hazel\OpenGLLayer</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Hazel\Renderer\Renderer.h">
-      <Filter>Hazel\Renderer</Filter>
-    </ClInclude>
     <ClInclude Include="src\Hazel\Window.h">
       <Filter>Hazel</Filter>
     </ClInclude>
@@ -96,12 +84,6 @@
     </ClCompile>
     <ClCompile Include="src\Hazel\Log.cpp">
       <Filter>Hazel</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Hazel\OpenGLLayer\OpenGLLayer.cpp">
-      <Filter>Hazel\OpenGLLayer</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Hazel\Renderer\Renderer.cpp">
-      <Filter>Hazel\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\imgui_impl_glfw.cpp">
       <Filter>Platform\OpenGL</Filter>

@@ -1,3 +1,6 @@
+#include "glad/glad.h"
+#include "GLFW/glfw3.h"
+
 #include <Hazel.h>
 
 class ExampleLayer : public Hazel::Layer
@@ -9,8 +12,7 @@ public:
 	}
 
 	void OnUpdate() override
-	{
-		
+	{		
 		count++;
 		if (count == 10)
 		{
@@ -32,7 +34,6 @@ class Sandbox : public Hazel::Application
 public:
 	Sandbox()
 	{
-		PushLayer(new Hazel::OpenGLLayer());
 		PushLayer(new ExampleLayer());
 		PushOverlay(new Hazel::ImGuiLayer());
 	}

@@ -40,7 +40,7 @@ namespace Hazel
         GLFWwindow* window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetWindowObject());
 
         ImGui_ImplOpenGL3_Init("#version 330");
-        ImGui_ImplGlfw_InitForOpenGL(window, false);
+        ImGui_ImplGlfw_InitForOpenGL(window, true);
 
     }
 
@@ -70,6 +70,8 @@ namespace Hazel
         if(ImGui::Begin("Main"))
         {
             ImGui::Text("%.3f FPS, %.1fms",(1000/(io.DeltaTime*1000)), io.DeltaTime*1000);
+			
+			ImGui::Button("Hi");
         }
         ImGui::End();
 
@@ -80,58 +82,7 @@ namespace Hazel
     
     void ImGuiLayer::OnEvent(Event& event)
     {
-        EventDispatcher dispatcher(event);
-        dispatcher.Dispatch<MouseButtonPressedEvent>(HZ_BIND_EVENT_FN(ImGuiLayer::OnMouseButtonPressedEvent));
-        dispatcher.Dispatch<MouseButtonReleasedEvent>(HZ_BIND_EVENT_FN(ImGuiLayer::OnMouseButtonReleasedEvent));
-        dispatcher.Dispatch<MouseMovedEvent>(HZ_BIND_EVENT_FN(ImGuiLayer::OnMouseMovedEvent));
-        dispatcher.Dispatch<MouseScrolledEvent>(HZ_BIND_EVENT_FN(ImGuiLayer::OnMouseScrolledEvent));
-        dispatcher.Dispatch<KeyPressedEvent>(HZ_BIND_EVENT_FN(ImGuiLayer::OnKeyPressedEvent));
-        dispatcher.Dispatch<KeyReleasedEvent>(HZ_BIND_EVENT_FN(ImGuiLayer::OnKeyReleasedEvent));
-        dispatcher.Dispatch<WindowResizeEvent>(HZ_BIND_EVENT_FN(ImGuiLayer::OnWindowResizeEvent));
-        // dispatcher.Dispatch<KeyTypedEvent>(HZ_BIND_EVENT_FN(ImGuiLayer::OnKeyTypedEvent));
+        
     }
     
-    bool ImGuiLayer::OnMouseButtonPressedEvent(MouseButtonPressedEvent& e){
-        int button = e.GetMouseButton();
-        ImGui_ImplGlfw_MouseButtonCallback(nullptr, e.GetMouseButton(), GLFW_PRESS, 0);
-        return false;
-    }
-    
-    bool ImGuiLayer::OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& e){
-        int button = e.GetMouseButton();
-        GLFWwindow* window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetWindowObject());
-        ImGui_ImplGlfw_MouseButtonCallback(window, e.GetMouseButton(), GLFW_RELEASE, 0);
-        return false;
-    }
-    
-    bool ImGuiLayer::OnMouseMovedEvent(MouseMovedEvent& e){
-        ImGuiIO& io = ImGui::GetIO();
-        io.MousePos = ImVec2(e.GetX(), e.GetY());
-        return false;
-    }
-    
-    bool ImGuiLayer::OnMouseScrolledEvent(MouseScrolledEvent& e){
-        ImGuiIO& io = ImGui::GetIO();
-        io.MouseWheel += e.GetYOffset();
-        io.MouseWheelH += e.GetXOffset();
-        return false;
-    }
-    
-    bool ImGuiLayer::OnKeyPressedEvent(KeyPressedEvent& e){
-        GLFWwindow* window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetWindowObject());
-        ImGui_ImplGlfw_KeyCallback(window, e.GetKeyCode(), e.GetKeyCode(), GLFW_PRESS, 0);
-
-        return false;
-    }
-    
-    bool ImGuiLayer::OnKeyReleasedEvent(KeyReleasedEvent& e){
-        GLFWwindow* window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetWindowObject());
-        ImGui_ImplGlfw_KeyCallback(window, e.GetKeyCode(), e.GetKeyCode(), GLFW_RELEASE, 0);
-
-        return false;
-    }
-    
-    bool ImGuiLayer::OnWindowResizeEvent(WindowResizeEvent& e){
-        return false;
-    }
 }
