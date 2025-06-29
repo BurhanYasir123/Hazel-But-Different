@@ -1,3 +1,5 @@
+# THIS REPOSITARY IS DISCONTINUED AND ARCHIVED
+i lost it when switching to linux i coudnt get it to build
 # Hazel-But-Different
 This is a copy of hazel but i did some things to modify it i copied it from the hazel repo but an very old commit and i plan to build it up for learning experience
 
